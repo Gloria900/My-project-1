@@ -1,0 +1,487 @@
+is HTML, and why is it important in web development?
+•	HTML (HyperText Markup Language) is the standard language used to create and structure content on the web.
+•	It provides the basic structure of web pages using elements (tags) like <h1>, <p>, <img>, etc.
+•	Importance:
+•	Without HTML, there would be no structure for web browsers to display content.
+•	It defines headings, paragraphs, links, images, forms, etc.
+
+
+2. What is the difference between an id and a class in HTML?
+•	id:
+•	Uniquely identifies a single element.
+Example 
+•	Syntax: id="uniqueName".
+<div id="header"></div>
+
+•	Only one element on the page can have a specific ID.
+
+•	class:
+•	Defines a group of elements with the same styling or behavior.
+•	Syntax: class="commonName".
+Example:
+<div class="card"></div>
+<div class="card"></div>
+
+•	Multiple elements can share the same class.
+
+Summary:
+•	Use id for unique elements.
+•	Use class for grouping elements.
+
+
+
+3. What are semantic HTML elements, and why are they important?
+•	Semantic HTML elements clearly describe their meaning to both the browser and developers.
+•	Examples: <article>, <section>, <header>, <footer>, <nav>, <main>.
+•	Importance:
+•	Makes code easier to read and maintain.
+•	Improves SEO (Search Engine Optimization).
+•	Enhances accessibility for screen readers and assistive technologies.
+4. Explain the concept of the DOM (Document Object Model).
+•	The DOM is a programming interface for web documents.
+•	It represents the page as a tree-like structure of objects (nodes).
+•	When you load a web page, the browser turns HTML into a DOM.
+•	Each tag becomes a node in the tree.
+•	JavaScript can be used to manipulate the DOM (add, remove, or change elements).
+
+Example:
+HTML:
+<p>Hello World</p>
+
+DOM:
+Document
+└── html
+  └── body
+      └── p
+          └── "Hello World"
+          5. What is the purpose of the <meta> tag in HTML?
+          •	The <meta> tag provides metadata (information about the webpage) for browsers and search engines.
+          •	Common uses:
+          •	Character encoding:
+      
+      HTML:
+      
+      <meta charset="UTF-8">
+      
+      Defines the character set.
+      
+          •	SEO description:
+      html:
+      
+      <meta name="description" content="A simple webpage about HTML.">
+      
+      Used by search engines for page summaries.
+      
+          •	Responsive Design:
+          html:
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+          Makes the page Mobile friendly.
+          
+          6. How do you create a hyperlink in HTML?
+              •	A hyperlink is created with the <a> (anchor) tag and the href attribute.
+          
+          .
+          
+          Example:
+          <a href="https://www.example.com">Visit Example</a>
+          href defines the URL or destination of the link.
+          
+          7. What is the difference between inline, block, and inline-block elements in HTML?
+              •	Block elements:
+              •	Take up the full width.
+              •	Always start on a new line.
+              •	Examples: <div>, <p>, <h1>.
+              •	Inline elements:
+              •	Take up only as much width as needed.
+              •	Do not start a new line.
+              •	Examples: <span>, <a>, <strong>.
+              •	Inline-block elements:
+              •	Behave like inline (sit side-by-side).
+              •	Allow setting width and height (unlike pure inline elements).
+              Examples:
+              html
+              <span>Inline</span> 
+              <div>Block</div> 
+              <span style="display:inline-block; width:100px;">Inline-Block</span>
+              
+              
+              8. What is the <form> tag used for in HTML?
+                  •	The <form> tag is used to collect user input.
+                  •	It wraps form elements like:
+                  •	<input>, <textarea>, <button>, <select>, etc.
+                  •	Action attribute: where to send form data.
+                  •	Method attribute: how to send data (GET or POST).
+              
+              Example:
+              
+              html
+              <form action="/submit" method="post">
+                <input type="text" name="username">
+                <button type="submit">Submit</button>
+              </form>
+              
+              
+              9. What is the box model in CSS, and what are its components?
+                  •	The CSS Box Model is how every HTML element is treated as a rectangular box.
+                  •	It consists of 4 main parts (from inside out):
+                  1.	Content: The text, image, or data inside the box.
+                  2.	Padding: Space inside the box, around the content.
+                  3.	Border: The line surrounding padding (and content).
+                  4.	Margin: Space outside the border, separating it from other elements.
+              
+              Example:
+              
+              css
+              div {
+                width: 200px;
+                padding: 20px;
+                border: 5px solid black;
+                margin: 10px;
+              }
+              10. Explain the difference between padding and margin in CSS.
+              •	Padding:
+              •	Space inside an element, between content and border.
+              •	Increases the size of the element.
+              •	Margin:
+              •	Space outside the element’s border.
+              •	Creates gaps between elements.
+          
+          Example:
+          css:
+          div {
+            padding: 20px; /* pushes content inward */
+            margin: 20px;  /* pushes element away from others */
+          }
+          
+              •	Padding = inside the box.
+              •	Margin = outside the box.
+          
+              11. What are CSS selectors, and how do they work?
+
+              CSS selectors are patterns used to select HTML elements so styles can be applied to them.
+              
+              Types of selectors:
+                  1.	Element Selector
+                  •	Targets elements by name.
+              
+              Example:
+              
+              p {
+                color: blue;
+              }
+              
+              Applies to all <p> tags.
+              
+                  2.	Class Selector
+                  •	Targets elements with a specific class attribute.
+                  •	Syntax: starts with a dot (.).
+                  •	Example:
+              .highlight {
+                background-color: yellow;
+              }
+                  3.	ID Selector
+                  •	Targets a single element with a specific id attribute.
+                  •	Syntax: starts with a hash (#).
+              Example :
+              
+              #main-title {
+                font-size: 24px;
+              }
+                  4.	Attribute Selector
+                  •	Targets elements based on their attributes.
+              
+              Example:
+              input[type="text"] {
+                border: 1px solid gray;
+              }
+              
+                  5.	Universal Selector
+                  •	Targets all elements.
+                  •	Example:
+              * {
+                margin: 0;
+                padding: 0;
+              }
+              
+                  6.	Group Selector
+                  •	Applies styles to multiple selectors.
+                  •	Example:
+              
+              h1, h2, h3 {
+                font-family: Arial;
+              }
+                  7.	Descendant Selector
+                  •	Targets elements inside a specific element.
+              Example:
+              div p {
+                color: green;
+              }      
+              12. What is Flexbox, and how does it work in CSS?
+
+Flexbox (Flexible Box Layout) is used to build 1-dimensional layouts, arranging items in a row or column with dynamic spacing and alignment.
+
+How to use:
+
+Set a container to use Flexbox:             
+.container {
+display: flex;
+}
+Main Properties:
+•	flex-direction
+•	Sets the main axis (row or column).
+•	Values: row (default), row-reverse, column, column-reverse.
+Example:
+flex-direction: row;
+•	justify-content
+•	Aligns items horizontally (main axis).
+•	Values: flex-start, center, space-between, space-around, space-evenly.
+Example:
+justify-content: center;
+•	align-items
+•	Aligns items vertically (cross axis).
+•	Values: flex-start, center, flex-end, stretch.
+Example :
+align-items: center;
+Example:
+
+.container {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+13. What is the difference between position: relative and position: absolute in CSS?
+
+position: relative
+•	Moves an element relative to its original position.
+•	The space it occupied remains.
+•	Useful for slightly offsetting elements.
+Example 
+
+.box {
+position: relative;
+top: 10px; /* moves down 10px */
+left: 20px; /* moves right 20px */
+}
+
+position: absolute
+•	Removes the element from the normal flow.
+•	Positions it relative to the nearest ancestor with position set (relative, absolute, or fixed).
+•	If no such ancestor exists, it positions relative to the <body>.
+Example:
+.box {
+position: absolute;
+top: 0;
+left: 0;
+}
+Comparison:
+
+Property
+relative
+absolute
+Keeps space in layout?
+Yes
+No
+Relative to?
+Itself
+Nearest positioned ancestor
+14. What is the purpose of media queries in CSS?
+
+Media queries allow you to apply CSS styles based on:
+•	Screen width
+•	Device type (mobile, tablet, desktop)
+•	Orientation (portrait or landscape)
+
+They help make web pages responsive — adapting layout and design to different screen sizes.
+Example:
+/* For devices smaller than or equal to 600px */
+@media (max-width: 600px) {
+body {
+background-color: lightgray;
+}
+}
+
+Common uses:
+•	Resize fonts on smaller screens.
+•	Stack columns instead of showing them side-by-side.
+•	Hide/show certain content on different devices.
+
+⸻
+
+15. What is CSS Grid, and how does it differ from Flexbox?
+
+CSS Grid is a 2D layout system (works with rows and columns), while Flexbox is 1D (either a row or column).
+
+CSS Grid Example:
+.container {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+gap: 20px;
+}
+
+Key properties:
+•	grid-template-columns / grid-template-rows: define structure.
+•	grid-column / grid-row: position children.
+•	gap: space between grid items.
+
+16. What are pseudo-classes and pseudo-elements in CSS?
+
+Pseudo-classes:
+
+Target elements based on user interaction or position/state.
+
+Example:
+
+a:hover {
+color: red; /* when mouse hovers */
+}
+
+input:focus {
+border-color: blue; /* when input is selected */
+}
+
+li:first-child {
+font-weight: bold;
+}
+
+Pseudo-elements:
+
+Target parts of an element, not the whole.
+
+Examples:
+
+p::first-line {
+text-transform: uppercase;
+}
+
+p::first-letter {
+font-size: 200%;
+}
+
+.card::before {
+content: "→ ";
+color: green;
+}
+17. What is the difference between var, let, and const in JavaScript?
+
+These three keywords are used to declare variables, but they differ in scope, hoisting, and mutability.
+
+var
+•	Function-scoped.
+•	Can be redeclared.
+•	Hoisted (moved to the top of its scope), but initialized as undefined.
+
+function test() {
+console.log(x); // undefined
+var x = 5;
+}
+
+let
+•	Block-scoped (limited to {} block).
+•	Cannot be redeclared in the same scope.
+•	Hoisted but not initialized (ReferenceError if accessed before declaration).
+
+let x = 10;
+{
+let x = 5; // different x
+console.log(x); // 5
+}
+console.log(x); // 10
+const
+•	Also block-scoped.
+•	Must be initialized during declaration.
+•	Cannot be reassigned, but if it’s an object/array, contents can be changed.
+
+const name = "John";
+// name = "Mike"; // Error
+
+const person = { age: 30 };
+person.age = 35; // Allowed
+18. What is the difference between null and undefined in JavaScript?
+
+undefined
+•	A variable that has been declared but not assigned a value.
+•	Often automatically assigned by JavaScript.
+
+let x;
+console.log(x); // undefined
+
+null
+•	An intentional absence of any value.
+•	Manually set by a developer to indicate “no value”.
+let y = null;
+console.log(y); // null
+Feature
+undefined
+null
+Type
+undefined
+object (quirk in JS)
+Set by
+JavaScript (default)
+Developer (manually)
+Meaning
+Variable is declared but empty
+Variable is intentionally empty
+
+
+19. What are JavaScript functions, and how do you define one?
+
+A function is a block of reusable code that performs a specific task.
+
+1. Regular Function Declaration
+function greet(name) {
+return "Hello, " + name;
+}
+console.log(greet("Alice")); // Hello, Alice
+2. ⁠Function Expression
+const add = function (a, b) {
+return a + b;
+};
+console.log(add(2, 3)); // 5
+3. ⁠Arrow Function
+
+Shorter syntax, does not have its own this.
+const multiply = (x, y) => x * y;
+console.log(multiply(4, 5)); // 20
+
+// With a block body:
+const sayHi = name => {
+return Hi, ${name};
+};
+
+20. What is the purpose of the this keyword in JavaScript?
+
+The this keyword refers to the object that is currently executing the function. Its value depends on how the function is called.
+
+In a regular function (non-strict mode):
+function show() {
+console.log(this);
+}
+show(); // In browser: Window object
+
+Inside an object method:
+
+const user = {
+name: "Alice",
+greet() {
+console.log(this.name);
+}
+};
+user.greet(); // Alice
+
+Arrow functions:
+•	Do not bind this; they inherit it from the parent scope.
+const obj = {
+name: "Bob",
+greet: () => {
+console.log(this.name);
+}
+};
+obj.greet(); // undefined (because this is not obj)
+
+In event handlers (DOM):
+<button onclick="alert(this.innerText)">Click me</button>
+
+Here, this refers to the button element that was clicked.
